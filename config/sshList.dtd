@@ -1,0 +1,5 @@
+<!ELEMENT sshList (connection*)>
+        <!ELEMENT connection (name, command, password)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT command (#PCDATA)>
+        <!ELEMENT password (#PCDATA)>

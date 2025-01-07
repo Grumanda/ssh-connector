@@ -83,7 +83,7 @@ public class SSHDeleterFrame extends JFrameWithLogo {
         int option = JOptionPane.showConfirmDialog(gui, "Are you sure?", "Delete",
                 JOptionPane.YES_NO_OPTION);
         if (option == JOptionPane.YES_OPTION) {
-            Main.commander.deleteData(selection.getName());
+            Main.commander.deleteConnection(selection.getName());
             dispose();
             gui.reload();
         }

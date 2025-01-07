@@ -20,7 +20,7 @@ public class ConfigManager {
     public ConfigManager() {
         Scanner scanner;
         try {
-            scanner = new Scanner(new File("saves\\settings.txt"));
+            scanner = new Scanner(new File("config\\settings.txt"));
             String s = "";
             while (scanner.hasNext()) {
                 s = scanner.next();

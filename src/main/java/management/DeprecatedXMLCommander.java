@@ -29,13 +29,13 @@ import java.util.List;
  *
  * @author ChatGPT
  */
-public class XMLCommander {
+public class DeprecatedXMLCommander {
 
     private static final String SAVE_DIR = "saves";
     private static final String XML_FILE = SAVE_DIR + File.separator + "commands.xml";
 
     // Konstruktor
-    public XMLCommander() {
+    public DeprecatedXMLCommander() {
         try {
             File dir = new File(SAVE_DIR);
             File xmlFile = new File(XML_FILE);

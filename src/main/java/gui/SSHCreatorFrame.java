@@ -122,7 +122,7 @@ public class SSHCreatorFrame extends JFrameWithLogo {
         String command = commandField.getText();
         String pwd = pwdField.getText();
 
-        Main.commander.addCommand(name, command, pwd);
+        Main.commander.addConnection(name, command, pwd);
         dispose();
         gui.reload();
     }

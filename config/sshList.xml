@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><sshList><connection><name>Example 1</name><command>ssh mustermann@192.168.0.1 -p 2222</command><password>topsecret</password></connection></sshList>

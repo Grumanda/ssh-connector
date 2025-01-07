@@ -19,7 +19,7 @@ public class Main {
 
     public static final Datensatz EMPTY_DATENSATZ = new Datensatz("", "", "");
     public static List<Datensatz> datensatzList;
-    public static XMLCommander commander;
+    public static XMLCommanderV2 commander;
     public static ConfigManager configManager;
 
     /**
@@ -27,7 +27,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        commander = new XMLCommander();
+        commander = new XMLCommanderV2();
         configManager = new ConfigManager();
 
         startSession();
@@ -38,8 +38,7 @@ public class Main {
      * have been added).
      */
     public static void startSession() {
-        commander.loadCommands();
-        commander.deleteData("Test Connection");
+        commander.loadConnections();
         applyDesign();
         new GUI();
     }
