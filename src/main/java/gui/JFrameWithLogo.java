@@ -2,6 +2,11 @@ package gui;
 
 import javax.swing.*;
 
+/**
+ * This class only adds the icon to the JFrame.
+ *
+ * @author Grumanda
+ */
 public class JFrameWithLogo extends JFrame {
 
     public JFrameWithLogo() {

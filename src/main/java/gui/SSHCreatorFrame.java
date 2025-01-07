@@ -1,11 +1,13 @@
 package gui;
 
 import management.Main;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * This class defines the JFrame for adding new connections
+ */
 public class SSHCreatorFrame extends JFrameWithLogo {
 
     private GUI gui;
@@ -18,14 +20,21 @@ public class SSHCreatorFrame extends JFrameWithLogo {
     private JButton saveButton;
     private JPanel contentPanel;
 
+    /**
+     * This constructor defines the Frame.
+     *
+     * @param gui
+     */
     public SSHCreatorFrame(GUI gui) {
         this.gui = gui;
+        // Window configuration
         setTitle("SSH Connector -> Add connection");
         setSize(500, 500);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(gui);
         setLayout(new BorderLayout());
 
+        // Adding components
         add(getContentPanel(), BorderLayout.CENTER);
         add(getSaveButton(), BorderLayout.SOUTH);
 
@@ -33,14 +42,21 @@ public class SSHCreatorFrame extends JFrameWithLogo {
         setVisible(true);
     }
 
+    /**
+     * This method defines the contentPanel and returns it.
+     *
+     * @return JPanel
+     */
     private JPanel getContentPanel() {
         if (contentPanel == null) {
+            // Initial setup
             contentPanel = new JPanel();
             contentPanel.setLayout(new GridBagLayout());
             GridBagConstraints gbc = new GridBagConstraints();
             gbc.insets = new Insets(10, 10, 10, 10);
             gbc.fill = GridBagConstraints.BOTH;
 
+            // Creation of components
             nameLabel = new JLabel("Name:");
             commandLabel = new JLabel("Command:");
             pwdLabel = new JLabel("Password:");
@@ -48,6 +64,7 @@ public class SSHCreatorFrame extends JFrameWithLogo {
             commandField = new JTextField();
             pwdField = new JPasswordField();
 
+            // Configurate fonts
             Font font = new Font("Tahoma", Font.PLAIN, 20);
             nameLabel.setFont(font);
             commandLabel.setFont(font);
@@ -56,6 +73,7 @@ public class SSHCreatorFrame extends JFrameWithLogo {
             commandField.setFont(font);
             pwdField.setFont(font);
 
+            // Add all labels
             gbc.gridx = 0;
             gbc.gridy = 0;
             contentPanel.add(nameLabel, gbc);
@@ -64,6 +82,7 @@ public class SSHCreatorFrame extends JFrameWithLogo {
             gbc.gridy = 2;
             contentPanel.add(pwdLabel, gbc);
 
+            // Add all fields
             gbc.gridwidth = 2;
             gbc.weightx = 2;
             gbc.gridx = 1;
@@ -77,6 +96,11 @@ public class SSHCreatorFrame extends JFrameWithLogo {
         return contentPanel;
     }
 
+    /**
+     * This method defines the saveButton and returns it.
+     *
+     * @return JButton
+     */
     private JButton getSaveButton() {
         if (saveButton == null) {
             saveButton = new JButton();
@@ -87,6 +111,12 @@ public class SSHCreatorFrame extends JFrameWithLogo {
         return saveButton;
     }
 
+    /**
+     * This is the ActionEvent of the saveButton.
+     * This method adds the new entry to a xml-file.
+     *
+     * @param event
+     */
     private void saveButtonAction(ActionEvent event) {
         String name = nameField.getText();
         String command = commandField.getText();
