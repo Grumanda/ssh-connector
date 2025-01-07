@@ -17,6 +17,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class should read and write into the xml file where the connections are
+ * saved with all parameters (name, command, password).
+ *
+ * I will not comment this class because it is really shit and creates
+ * a lot of empty lines in the xml file.
+ * I was really lazy and just let ChatGPT generate this shit.
+ *
+ * I want to make a better one in future by myself...
+ *
+ * @author ChatGPT
+ */
 public class XMLCommander {
 
     private static final String SAVE_DIR = "saves";
