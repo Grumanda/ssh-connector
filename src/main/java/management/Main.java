@@ -10,6 +10,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * This is the main class of this program.
+ *
+ * @author Grumanda
+ */
 public class Main {
 
     public static final Datensatz EMPTY_DATENSATZ = new Datensatz("", "", "");
@@ -17,6 +22,10 @@ public class Main {
     public static XMLCommander commander;
     public static ConfigManager configManager;
 
+    /**
+     * Main method.
+     * @param args
+     */
     public static void main(String[] args) {
         commander = new XMLCommander();
         configManager = new ConfigManager();
@@ -24,6 +33,10 @@ public class Main {
         startSession();
     }
 
+    /**
+     * This method starts the session (needed to update everything when a new connection
+     * have been added).
+     */
     public static void startSession() {
         commander.loadCommands();
         commander.deleteData("Test Connection");
@@ -31,6 +44,9 @@ public class Main {
         new GUI();
     }
 
+    /**
+     * This method applies the design for the program (FlatLaf-Framework).
+     */
     private static void applyDesign() {
         String design = configManager.getDesign();
         switch (design) {
@@ -48,6 +64,12 @@ public class Main {
         }
     }
 
+    /**
+     * This method takes the passed font and returns it in an underlined version.
+     *
+     * @param font
+     * @return Font
+     */
     public static Font underline(Font font) {
         Map<TextAttribute, Object> attributes = new HashMap<>(font.getAttributes());
         attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
