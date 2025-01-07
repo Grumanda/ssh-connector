@@ -1,0 +1,14 @@
+design=FlatMaterialDesignDarkIJTheme
+autoClipboardCopy=true
+
+//You can use following designs:
+//FlatArcIJTheme
+//FlatCyanLightIJTheme
+//FlatSolarizedDarkIJTheme
+//FlatSolarizedLightIJTheme
+//FlatCobalt2IJTheme
+//FlatArcDarkIJTheme
+//FlatMaterialDesignDarkIJTheme
+//FlatCarbonIJTheme
+//FlatVuesionIJTheme
+//FlatXcodeDarkIJTheme
